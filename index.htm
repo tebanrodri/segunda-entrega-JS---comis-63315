@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segunda entrega - busqueda producto</title>
+</head>
+<body>
+    <h1>Tienda de Productos</h1>
+
+    <div>
+        <label for="buscarProducto">Buscar Producto:</label>
+        <input type="text" id="buscarProducto" placeholder="Nombre del producto">
+        <button onclick="buscarProducto()">Buscar</button>
+
+        <label for="filtroCategoria">Filtrar por Categoría:</label>
+        <select id="filtroCategoria" onchange="filtrarProductos()">
+            <option value="">Todas</option>
+            <option value="Electrónica">Electrónica</option>
+            <option value="Hogar">Hogar</option>
+            <option value="Ropa">Ropa</option>
+        </select>
+    </div>
+
+  
+    <div id="listaProductos"></div>
+
+
+    <h2>Carrito de Compras</h2>
+    <div id="carrito"></div>
+    <p>Total de la compra: $<span id="totalGasto">0</span></p>
+    <button onclick="finalizarCompra()">Finalizar Compra</button>
+
+  
+    <div id="modalCompra" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgb(142, 201, 250); padding: 20px; border: 1px solid #ccc; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);">
+        <p id="mensajeCompra"></p>
+        <button onclick="cerrarModal()">Cerrar</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
